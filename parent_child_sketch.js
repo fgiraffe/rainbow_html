@@ -1,11 +1,21 @@
 
-var gCanvas;
-function setup() {
-    gCanvas = createCanvas(300,300);
-    gCanvas.parent('canvas_para');
+
+var addButt;
+var myOL;
+
+function addItenToOL() {
+    var numString = int (random(0,20));
+    var newListItem = createElement("li", numString);
+    newListItem.parent(myOL);
 }
 
-function draw() {
-background(127);
-ellipse(width/2, height/2, 100, 100);
+
+function setup() {
+    noCanvas();
+
+    addButt = select('#addButton');
+    addButt.mousePressed(addItenToOL);
+
+    myOL = select('#myOL');
+
 }
