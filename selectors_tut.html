@@ -1,0 +1,54 @@
+<html>
+
+<!--  Page for exmaples from Shiffman "7.9: CSS Selectors" -->
+<!--  https://youtu.be/sVo8Dbii8OQ?list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX -->
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* class overides tag.
+         id overrides class.
+         more general to more specific */
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        /* TAG selector: all paragraphs are 24 pt*/
+
+        p {
+            font-size: 24;
+        }
+        /* ID selector.
+            make just the single id matching "unicorn" be bold and blue */
+
+        #unicorn {
+            font-weight: bolder;
+            color: blue;
+        }
+        /* CLASS selector.
+            make the odd elements be red via a class selector */
+
+        .odd {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>A plain paragraph of body text from the html file</p>
+
+    <p class="odd">Paragraph 1</p>
+
+    <p>Paragraph 2</p>
+
+    <p class="odd">Paragraph 3</p>
+
+    <p>Paragraph 4</p>
+
+    <p id="unicorn" class="odd">Some unicorn text</p>
+
+</body>
+
+</html>
