@@ -1,11 +1,21 @@
-
+//  code from lessoon 7.13 on changting class/rem,oving class on the fly
 
 var addButt;
 var myOL;
 
 function addItenToOL() {
-    var numString = int (random(0,20));
+    var num = int(random(0, 20));
+    var numString = str(num);
     var newListItem = createElement("li", numString);
+
+    // if it is an odd number, make it be in the oddItems class
+    if (num % 2 != 0) {
+        newListItem.class("oddItems");
+        // note if these already had a class it would now have 2
+        // use removeClass to remedy.
+    }
+    // finally add it to the ordered list
+
     newListItem.parent(myOL);
 }
 
