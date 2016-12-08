@@ -32,7 +32,7 @@ function appleMousePress() {
     this.class('blueberry');
     this.html("post op blueberry");
     // but NOTE it still does not have mousePressed set so
-    // it has not function for that. no magical inheritance. 
+    // it has not function for that. no magical inheritance.
 }
 
 
