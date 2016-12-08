@@ -1,4 +1,6 @@
-//  code from lessoon 7.13 on changting class/rem,oving class on the fly
+//  code from lessoon 7.13 on changing class/removing class on the fly
+// finds an item with a static class which was created in the html file
+// and adds items to it. 
 
 var addButt;
 var myOL;

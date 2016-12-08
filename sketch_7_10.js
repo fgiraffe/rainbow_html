@@ -1,3 +1,7 @@
+
+// illustrate selection of elements by class using p5
+// https://youtu.be/sSQPLIHIzmg?list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX
+
 var my_unicorn;
 var my_odd_paras;
 
@@ -32,7 +36,7 @@ function setup() {
     my_unicorn.mouseOut(uniMouseOut);
 
     my_odd_paras = selectAll(".odd");
-
+    // returns a array
     for (var i = 0; i < my_odd_paras.length; i++) {
         my_odd_paras[i].mouseOver(oddsMouseIn);
         my_odd_paras[i].mouseOut(oddsMouseOut);
