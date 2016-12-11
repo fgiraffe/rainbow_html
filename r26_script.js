@@ -21,7 +21,9 @@ function extractPhoneNums() {
     var phoneTextBox = select("#phone_input");
     var phoneString = phoneTextBox.value();
     var phoneRegex = /\d{3}[-.]\d{4}/g;
-
+    // note using g flag gets us all mathes in an array, but we lose
+    // any groups we might try to create.
+    
     var matchingNums = phoneString.match(phoneRegex);
     var outString = "";
     var srcStr;
