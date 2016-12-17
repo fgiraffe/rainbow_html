@@ -1,0 +1,40 @@
+<html>
+
+<!-- video for using nlp-compromise library
+https://youtu.be/tk_JGu2AbJY?list=PLRqwX-V7Uu6a343yZ_JcPzIric4SOGqMZ
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <script language="javascript" type="text/javascript" src="../libraries/p5.js"></script>
+    <script language="javascript" src="../libraries/p5.dom.js"></script>
+
+    <!-- load from the web! -->
+    <script src="https://unpkg.com/nlp_compromise@latest/builds/nlp_compromise.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="nlp1_script.js"></script>
+
+    <!-- this line removes any default padding and style. you might only need one of these values set. -->
+    <style>
+        body {
+            padding: 2;
+            margin: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Demo of nlp-compromise:</h1>
+    <h2>Reads the input text, changes the verbs to future and pluralizes the nouns</h2>
+    <h3>Which really makes no sense but you get the idea of what nlp-compromise can do.</h3>
+    <p></p>
+
+    <textarea id="text_input" rows="4" cols="40">The quick brown fox jumps over the lazy dog.</textarea>
+    <p></p>
+    <button id="text_submit">nlp Magic</button>
+
+    <hr>
+</body>
+
+</html>
