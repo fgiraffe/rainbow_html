@@ -5,8 +5,7 @@ var dropzone;
 
 
 function setup() {
-    createCanvas(200, 200);
-    background(127);
+    noCanvas();
 
     dropzone = select("#dropzone");
     dropzone.dragOver(handleDragOver);
@@ -33,12 +32,13 @@ function handleFile(file) {
 
     // note if we wanted to put the file IN our canvas
     // (as opposed to crateing a new element) we could
-    // use the image() function. 
+    // use the image() function.
 }
 
 function handleDrop_ZZZZZ() {
-    // in thie example all we need to do here is get rid of the highlight
-    // so we can just call the function we already have.
+    // in this example all we need to do is get rid
+    // of the highlight on the drop zone.
+    // So we can just call the function we already have.
     handleDragLeave();
 }
 

@@ -11,7 +11,7 @@ function setup() {
         p.style('background-color', '#CCC');
         p.style('padding', '24px');
 
-        var a = createA("#", 'apples');
+        var a = createA("#", 'Add a bear!');
         a.mousePressed(addPhoto);
 
         // set a to have p as a parent

@@ -5,6 +5,7 @@ var NUM_APPLES = 30;
 var NUM_BLUEBERRIES = 30;
 
 function setup() {
+
     for (var i = 0; i < NUM_APPLES; i++) {
 
         var p = createP('Apples');
@@ -30,9 +31,11 @@ function setup() {
 function appleMousePress() {
     this.removeClass('apple');
     this.class('blueberry');
-    this.html("post op blueberry");
+    this.html("I was an apple");
     // but NOTE it still does not have mousePressed set so
-    // it has not function for that. no magical inheritance.
+    // it has no function for that. no magical inheritance.
+    // have to set manually
+    this.mousePressed(bbMousePress);
 }
 
 
@@ -40,5 +43,7 @@ function bbMousePress() {
     // reminder "this" comes from p5
     // now the bb is BOTH a blueberry AND an apple because multiple inheritance
     this.class('apple');
-    this.html("pre op Apple");
+    this.html("I was a BB");
+    this.mousePressed(appleMousePress);
+
 }
