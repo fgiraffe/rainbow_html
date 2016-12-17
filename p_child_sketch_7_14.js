@@ -36,7 +36,7 @@ function removeImagesArray() {
 }
 
 function removeImgSelectAll() {
-    // better metho, using selectAll to find the images
+    // better method, using selectAll to find the images
     //  instead of manually tracking them via array
     myImages = selectAll("img");
     for (var i = 0; i < myImages.length; i++) {
