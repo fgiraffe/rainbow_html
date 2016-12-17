@@ -1,3 +1,6 @@
+// code for video https://youtu.be/lIPEvh8HbGQ?list=PLRqwX-V7Uu6a343yZ_JcPzIric4SOGqMZ
+
+
 var textIn;
 var gLexicon;
 
@@ -29,12 +32,10 @@ function doRiTAMagic() {
 
         // even better, just swap the nouns and plural nouns
         // and search for those typers using regex
-        pos = partsOfSpeech[i];
-        if (/nn.*/.test(pos)) {
-            var newWord = gLexicon.randomWord(pos);
-            if (newWord.length == 0) {
-                newWord = rs[i];
-            }
+        var speechPart = partsOfSpeech[i];
+
+        if (/nn.*/.test(speechPart)) {
+            newWord = gLexicon.randomWord(speechPart);
             outText += newWord;
         } else {
             outText += rs[i];
