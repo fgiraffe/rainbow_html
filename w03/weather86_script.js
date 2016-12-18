@@ -1,5 +1,3 @@
-var gaW;
-var wiW;
 
 var PASSCODE = "APPID=f2a4572c04e4385b0342d8ca4c381dcb"
 
@@ -20,24 +18,27 @@ function setup() {
 }
 
 function wiData(data) {
-    wiW = data;
+    var wiW = data;
+    var temperatureString = Math.floor(wiW.main.temp) + "F";
+
     dstElem = select("#w_temp");
-    dstElem.html(wiW.main.temp);
+    dstElem.html(temperatureString);
 
-    // iconData = "src='http://openweathermap.org/img/w/" + wiW.weather.icon + ".png"
-    createImg("http://openweathermap.org/img/w/01d.png");
-
-    // var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");
-    //
-    // then
-    //
-    // $('#display').html( icon );
+    var iconPath = "http://openweathermap.org/img/w/" + wiW.weather[0].icon + ".png"
+    var iconImg = createImg(iconPath);
+    dstElem.child(iconImg);
 
 }
 
 function gaData(data) {
-    gaW = data;
+    var gaW = data;
+    var temperatureString = Math.floor(gaW.main.temp) + "F";
+
     dstElem = select("#g_temp");
-    dstElem.html(gaW.main.temp);
+    dstElem.html(temperatureString);
+
+    var iconPath = "http://openweathermap.org/img/w/" + gaW.weather[0].icon + ".png"
+    var iconImg = createImg(iconPath);
+    dstElem.child(iconImg);
 
 }
